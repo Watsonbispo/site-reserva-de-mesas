@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante - Página Oficial</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="./assets/imgs/logoR.png" alt="Logo">
+  </a>
+  <nav class="menu">
+    <a href="#home">Inicio</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#menu">Menu</a>
+    <a href="#localizacao">Localização</a>
+    <a href="#localizacao">Contatos</a>
+    <a href="./Reserva_de_mesas.html" class="btn">Faça sua reserva</a>
+  </nav>
+  <div class="menu-mobile" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="secao">
+
+    <!-- Botões externos para troca de carrossel -->
+    <div class="carousel-selector-externo">
+      <button onclick="trocarCarrossel('diamante')">Diamante</button>
+      <button onclick="trocarCarrossel('topazio')">Topázio</button>
+      <button onclick="trocarCarrossel('esmeralda')">Esmeralda</button>
+    </div>
+
+    <!-- Contêiner com indicador e carrossel -->
+    <div class="carousel-container-wrapper">
+      <div class="carousel-group-indicador">
+        <div class="carousel-label carousel-label-diamante show">Diamante</div>
+        <div class="carousel-label carousel-label-topazio hidden">Topázio</div>
+        <div class="carousel-label carousel-label-esmeralda hidden">Esmeralda</div>
+      </div>
+
+      <div class="carousel" id="carousel-container">
+        <div class="carousel-slides" id="carousel-diamante">
+          <img src="./assets/imgs/slide1.1.JPG" alt="Diamante 1" class="active">
+          <img src="./assets/imgs/slide1.2.JPG" alt="Diamante 2">
+          <img src="./assets/imgs/slide1.3.JPG" alt="Diamante 3">
+          <img src="./assets/imgs/slide1.4.JPG" alt="Diamante 3">
+          <img src="./assets/imgs/slide1.5.JPG" alt="Diamante 3">
+          <img src="./assets/imgs/slide1.6.JPG" alt="Diamante 3">
+          <img src="./assets/imgs/slide1.7.JPG" alt="Diamante 3">
+          <img src="./assets/imgs/slide1.8.JPG" alt="Diamante 3">
+        </div>
+
+        <div class="carousel-slides hidden" id="carousel-topazio">
+          <img src="./assets/imgs/topazio1.JPG" alt="Topazio 1" class="active">
+          <img src="./assets/imgs/topazio2.JPG" alt="Topazio 2">
+          <img src="./assets/imgs/topazio3.JPG" alt="Topazio 3">
+        </div>
+
+        <div class="carousel-slides hidden" id="carousel-esmeralda">
+          <img src="./assets/imgs/esmeralda1.JPG" alt="Esmeralda 1" class="active">
+          <img src="./assets/imgs/esmeralda2.JPG" alt="Esmeralda 2">
+          <img src="./assets/imgs/esmeralda3.JPG" alt="Esmeralda 3">
+        </div>
+
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </div>
+
+    <p>O cenário perfeito para celebrar a vida com elegância e exclusividade.<br>
+    Seu evento merece mais do que um lugar. Merece um espetáculo de sofisticação.</p>
+  </section>
+
+  <section id="sobre" class="secao">
+    <div class="conteudo">
+      <h1>Sobre Nós</h1>
+      <p>Oferecemos um espaço aconchegante com pratos selecionados e atendimento diferenciado.</p>
+    </div>
+  </section>
+
+  <section id="menu" class="secao">
+    <div class="conteudo">
+      <h1>Galeria</h1>
+      <p>Veja alguns registros do nosso ambiente e dos nossos pratos.</p>
+    </div>
+  </section>
+
+  <section id="localizacao" class="secao">
+    <div class="conteudo">
+      <h1>Localização</h1>
+      <p>Estamos localizados no coração da cidade. Venha nos visitar.</p>
+    </div>
+  </section>
+</main>
+
+<script src="./js/index.js"></script>
+</body>
+</html>

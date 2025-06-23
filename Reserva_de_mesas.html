@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Mesas - Eventos</title>
+  <link rel="stylesheet" href="./css/Reserva_de_mesas.css">
+</head>
+<body>
+
+  <header>
+    <button class="voltar" onclick="window.location.href='index.html'">Voltar</button>
+    <button class="ajuda" id="ajuda">Ajuda</button>
+  </header>
+
+  <main>
+    <form class="formulario" id="reservaForm">
+    <div class="top-form">
+        <a href="./index.html">
+            <img src="./assets/imgs/logoR.png" alt="Logo do local" class="logo">
+        </a>
+
+        <h2>Reserva de Mesa</h2>
+    </div>
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="seu@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+      <label for="telefone">Número WhatsApp:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
+
+      <label for="setor">Setor:</label>
+      <select id="setor" name="setor" required>
+        <option value="">Selecione...</option>
+        <option value="Diamante">Diamante</option>
+        <option value="Esmeralda">Esmeralda</option>
+        <option value="Topázio">Topázio</option>
+      </select>
+
+      <label for="cadeiras">Tipo de mesa</label>
+      <select id="cadeiras" name="cadeiras" required>
+        <option value="">Selecione...</option>
+        <option value="Social - 4">Mesa Social - 4</option>
+        <option value="Família - 6">Mesa Família - 6</option>
+      </select>
+
+      <label for="mesa">Mesas disponíveis:</label>
+      <select id="mesa" name="mesa" required></select>
+
+      <button type="submit" id="btn-reservar" disabled>Reservar Mesa</button>
+    </form>
+  </main>
+
+  <!-- Ajuda -->
+  <div id="modalAjuda" class="modal">
+    <div class="modal-content">
+      <h2>Ajuda</h2>
+      <p>
+        Preencha todos os campos do formulário para realizar sua reserva. 
+        Após clicar em "Reservar Mesa", você será direcionado para o pagamento. <br>
+        Após o pagamento vc sera redirecionado para coletar o QR code dO convite, <br>
+        cada QR possui um código unico , valido para data especifica do evento , e com seus dados registrados. <br>
+        esses dados precisam estar de acordo com os registrados usados no momento em que a reserva foi feita, pois <br>
+        salvamos os dados do cliente que efetuou a compra na lista de verificação . 
+      </p>
+      <button id="fecharModal">Voltar</button>
+    </div>
+  </div>
+
+  <script src="./js/airtable-mesas_corrigido.js"></script>
+</body>
+</html>
