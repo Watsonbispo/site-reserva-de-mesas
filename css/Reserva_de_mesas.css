@@ -1,1 +1,288 @@
-body{margin:0;padding:0;font-family:Arial,sans-serif;background:url(../assets/imgs/slide1.2.webp) no-repeat center center fixed;background-size:cover}header{position:fixed;top:0;width:100%;background-color:rgb(100 100 100 / .3);display:flex;align-items:center;padding:15px 0 15px 0;justify-content:space-between;z-index:1000}.logo{height:180px}header .voltar{margin-left:40px;background-color:rgb(226 221 155 / .6);color:#fff;border:none;padding:10px 20px;border-radius:20px 4px 20px 4px;cursor:pointer;font-weight:700;transition:0.3s}header .ajuda{margin-right:40px;background-color:rgb(226 221 155 / .6);color:#fff;border:none;padding:10px 20px;border-radius:20px 4px 20px 4px;cursor:pointer;font-weight:700;transition:0.3s}header .ajuda{border-radius:4px 20px 4px 20px}header .voltar:hover,header .ajuda:hover{background-color:#0056b3}main{min-height:100vh;display:flex;justify-content:center;flex-direction:column;align-items:center}.top-form{display:flex;flex-direction:column;align-items:center}.top-form h2{padding-top:10px;color:#fff}.formulario{margin-top:70px;display:flex;flex-direction:column;background-color:rgb(255 255 255 / .2);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border-radius:20px;border:1px solid rgb(255 255 255 / .3);box-shadow:0 8px 32px rgb(0 0 0 / .37);padding:30px;width:350px;color:#fff}.formulario label{display:block;margin-top:18px;font-weight:700;font-size:18px}.formulario input{width:96%;padding:10px;margin-top:8px;border-radius:8px;font-size:16px;color:#000;background-color:rgb(241 238 190 / .6);border:none}.formulario select{width:100%;padding:10px;margin-top:8px;border-radius:8px;font-size:16px;color:#fff;background-color:rgb(241 238 190 / .6);border:none}.formulario select option{color:#000}.formulario button{width:100%;padding:14px;margin-top:25px;border:none;background-color:rgb(226 221 155 / .6);color:#fff;font-weight:700;border-radius:8px;cursor:pointer;transition:0.3s;font-size:18px}.formulario button:hover{background-color:#0056b3}.modal{display:none;position:fixed;z-index:2000;left:0;top:0;width:100%;height:100%;background-color:rgb(0 0 0 / .7)}.modal-content{background-color:#fff;margin:10% auto;padding:30px;border-radius:20px;width:500px;max-width:90%;text-align:center}.modal-content h2{margin-top:0}.modal-content button{margin-top:20px;padding:10px 20px;background-color:#007bff;color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:700;transition:0.3s}.modal-content button:hover{background-color:#0056b3}@media (max-width:425px){.logo{height:80px}h2{font-size:22px;padding-top:90px}.formulario{width:90%;padding:20px}.modal-content{width:90%;padding:20px}}@media (max-width:768px){.logo{height:55px}h2{font-size:24px;padding-top:90px}.formulario{width:80%;padding:25px}.modal-content{width:80%;padding:25px}}@media (min-width:1440px){.formulario{width:450px}.modal-content{width:600px}}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url(../assets/imgs/slide1.2.webp) no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    background-color:rgba(0,0,0,0.6);
+    z-index:-1
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 0;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .voltar {
+    margin-left: 40px;
+    background-color: rgb(226,221,155,0.6);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px 4px 20px 4px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+
+header .ajuda {
+    margin-right: 40px;
+    background-color: rgb(226 221 155 / 0.6);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px 20px 4px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+header .voltar:hover,
+header .ajuda:hover {
+    background-color: #0056b3;
+}
+
+main {
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.secaoReservas{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+ width: 100vw;
+ height:100vh;
+}
+
+.secaoReservas h2{
+    color: #fff;
+    font-size:35px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.campoDeReserva{
+    max-width:60vw;
+    height:70vh;
+    gap:80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255 255 255 / 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgb(255 255 255 / 0.3);
+    box-shadow: 0 8px 32px rgb(0 0 0 / 0.37);
+    padding: 15px 15px 20px 15px;
+    color: #fff;
+}
+
+.top-form {
+    gap:0px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 260px;
+}
+
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width:400px;
+    padding: 0px 20px 0px 20px;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 21px;
+}
+.formulario input {
+    max-width: 96%;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #000;
+    background-color: rgb(241 238 190 / 0.6);
+    border: none;
+}
+.formulario select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #fff;
+    background-color: rgb(241 238 190 / 0.6);
+    border: none;
+}
+.formulario select option {
+    color: #000;
+}
+.formulario button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    border: none;
+    background-color: rgb(226 221 155 / 0.6);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+}
+.formulario button:hover {
+    background-color: #0056b3;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.7);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 435px) {
+
+    .campoDeReserva{
+        max-height:100vh;
+        width:98vw;
+    }
+
+    .formulario {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .top-form .logo{
+        width: 120px;
+    }
+    
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+   
+    .campoDeReserva{
+        gap:10px;
+        height:80vh;
+        padding:15px 28px 20px 28px;
+        max-width:80vw;
+    }
+
+    .logo{
+        width: 130px;
+    }
+
+    .formulario input{
+        font-size: 16px;
+    }
+
+    .formulario select{
+        font-size: 16px;
+    }
+}
+
+    .modal-content {
+        width: 80%;
+        padding: 25px;
+    }
+
+
+@media (max-width:1128px) {
+    .campoDeReserva{
+        display: flex;
+        gap:10px;
+        flex-direction: column;
+        height:100vh;
+        padding:15px 28px 20px 28px;
+    }
+
+    .secaoReservas h2{
+        display: none;
+    }
+
+    .logo{
+        width: 200px;
+    }
+
+    .formulario input{
+        font-size: 16px;
+    }
+
+    .formulario select{
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .formulario {
+        width: 450px;
+    }
+    .modal-content {
+        width: 600px;
+    }
+}

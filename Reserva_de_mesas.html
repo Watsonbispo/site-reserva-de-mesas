@@ -7,50 +7,46 @@
   <link rel="stylesheet" href="./css/Reserva_de_mesas.css">
 </head>
 <body>
-
   <header>
     <button class="voltar" onclick="window.location.href='index.html'">Voltar</button>
     <button class="ajuda" id="ajuda">Ajuda</button>
   </header>
 
   <main>
-    <form class="formulario" id="reservaForm">
+    <section class="secaoReservas">
+      <h2>Reserva sua Mesa</h2>
+    <div class="campoDeReserva">
     <div class="top-form">
         <a href="./index.html">
             <img src="./assets/imgs/logoR.webp" alt="Logo do local" class="logo">
         </a>
+      </div>
+    <form class="formulario" id="reservaForm">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+    
+        <label for="setor">Setor:</label>
+        <select id="setor" name="setor" required>
+          <option value="">Selecione...</option>
+          <option value="Diamante">Diamante</option>
+          <option value="Esmeralda">Esmeralda</option>
+          <option value="Topázio">Topázio</option>
+        </select>
 
-        <h2>Reserva de Mesa</h2>
-    </div>
-      <label for="nome">Nome Completo:</label>
-      <input type="text" id="nome" name="nome" required>
+        <label for="cadeiras">Tipo de mesa</label>
+        <select id="cadeiras" name="cadeiras" required>
+          <option value="">Selecione...</option>
+          <option value="Social - 4">Mesa Social - 4</option>
+          <option value="Família - 6">Mesa Família - 6</option>
+        </select>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="seu@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-
-      <label for="telefone">Número WhatsApp:</label>
-      <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
-
-      <label for="setor">Setor:</label>
-      <select id="setor" name="setor" required>
-        <option value="">Selecione...</option>
-        <option value="Diamante">Diamante</option>
-        <option value="Esmeralda">Esmeralda</option>
-        <option value="Topázio">Topázio</option>
-      </select>
-
-      <label for="cadeiras">Tipo de mesa</label>
-      <select id="cadeiras" name="cadeiras" required>
-        <option value="">Selecione...</option>
-        <option value="Social - 4">Mesa Social - 4</option>
-        <option value="Família - 6">Mesa Família - 6</option>
-      </select>
-
-      <label for="mesa">Mesas disponíveis:</label>
-      <select id="mesa" name="mesa" required></select>
-
-      <button type="submit" id="btn-reservar" disabled>Reservar Mesa</button>
+        <label for="mesa">Mesas disponíveis:</label>
+        <select id="mesa" name="mesa" required></select>
+          <!-- Mesas carregadas dinamicamente de acordo com a filtragem do formulario -->
+        <button type="submit" id="btn-reservar" disabled>Reservar Mesa</button>
     </form>
+  </div>  
+  </section>
   </main>
 
   <!-- Ajuda -->
