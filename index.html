@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurante - Página Oficial</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
@@ -12,24 +13,26 @@
   <a href="index.html" class="logo">
     <img src="./assets/imgs/logoR.webp" loading="lazy" alt="Logo">
   </a>
+  <h1>Espaço Ramalho Confort</h1>
   <nav class="menu">
     <a href="#home">Inicio</a>
     <a href="#sobre">Sobre</a>
     <a href="#menu">Menu</a>
     <a href="#localizacao">Localização</a>
-    <a href="#localizacao">Contatos</a>
     <a href="./Reserva_de_mesas.html" class="btn">Faça sua reserva</a>
   </nav>
-  <div class="menu-mobile" onclick="toggleMenu()">
+  <button class="menu-mobile" onclick="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
-  </div>
+  </button>
 </header>
 
 <main>
-  <section id="home" class="secao">
 
+  <section id="home" class="secao-inicio">
+    <h1 class="mobile-title">Espaço Ramalho Confort</h1>
+    <p>Conheça nosso espaço </p><br>
     <!-- Botões externos para troca de carrossel -->
     <div class="carousel-selector-externo">
       <button onclick="trocarCarrossel('diamante')">Diamante</button>
@@ -71,32 +74,162 @@
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
-    </div>
-
-    <p>O cenário perfeito para celebrar a vida com elegância e exclusividade.<br>
-    Seu evento merece mais do que um lugar. Merece um espetáculo de sofisticação.</p>
+    </div><br>
+    <a href="./Reserva_de_mesas.html" class="button-reserva-mob">Faça sua reserva</a>
   </section>
 
-  <section id="sobre" class="secao">
+  <section id="sobre" class="secao-sobre">
     <div class="conteudo">
-      <h1>Sobre Nós</h1>
-      <p>Oferecemos um espaço aconchegante com pratos selecionados e atendimento diferenciado.</p>
+      <div class="text-sobre">
+        <h2>Sobre Nós</h2>
+        <br>
+        <h3>Bem-vindo ao Espaço Nobre!</h3>
+        <br>
+        <p>O <strong>Espaço Nobre</strong> é um restaurante de alta gastronomia, onde a sofisticação e o sabor se encontram em perfeita harmonia. Localizado no coração da cidade, nosso ambiente foi projetado para oferecer uma experiência única, acolhedora e exclusiva.</p>
+
+        <p>Nosso cardápio é cuidadosamente elaborado, trazendo o melhor da culinária internacional com toques de autor, preparados com ingredientes frescos e selecionados. A cada prato servido, buscamos proporcionar uma verdadeira viagem de sabores e aromas, sempre com a mais alta qualidade.</p>
+        <br>
+        <h3>O que nos torna especiais?</h3>
+        <br>
+        <p>Além de nossa culinária requintada, o <span class="highlights">Espaço Nobre</span> é reconhecido pela excelência no atendimento. Nossa equipe está sempre pronta para oferecer um serviço personalizado, garantindo que cada visita seja memorável.</p>
+
+        <p>Seja para um jantar romântico, uma reunião de negócios ou uma celebração especial, o <strong>Espaço Nobre</strong> é o local ideal para criar momentos inesquecíveis.</p>
+        <br>
+        <h3>Visite-nos</h3>
+        <br>
+        <p>Estamos abertos de segunda a sábado, das 18h às 23h. Não deixe de fazer sua reserva e garantir sua mesa para uma noite deliciosa e cheia de sabor!</p>
+      </div>
+      <div class="img-sobre">
+        <img src="./assets/imgs/sob1.jpg" alt="imagen do buffe , na seção sobre">
+      </div>
     </div>
   </section>
 
-  <section id="menu" class="secao">
-    <div class="conteudo">
-      <h1>Galeria</h1>
-      <p>Veja alguns registros do nosso ambiente e dos nossos pratos.</p>
-    </div>
+  <section id="menu" class="secao-menu-cardapio">
+     <div class="menu-container">
+        <!-- Entradas -->
+        <article class="menu-category">
+            <h2>Entradas</h2>
+            <ul>
+                <li class="menu-item"><span>Salada de Frutas</span><br>Frutas frescas com limão.</li>
+                <li class="menu-item"><span>Bruschettas</span><br>Pão italiano com tomate e manjericão.</li>
+                <li class="menu-item"><span>Tabule</span><br>Trigo para kibe com pepino e tomate.</li>
+                <li class="menu-item"><span>Salada de Folhas</span><br>Folhas frescas com molho balsâmico.</li>
+                <li class="menu-item"><span>Patê de Alho</span><br>Delicioso patê de alho servido com torradinhas.</li>
+                <li class="menu-item"><span>Cuscuz Paulista</span><br>Cuscuz com legumes e frutos do mar.</li>
+            </ul>
+          </article>
+
+        <!-- Pratos Principais -->
+        <article class="menu-category">
+            <h2>Pratos Principais</h2>
+            <ul>
+                <li class="menu-item"><span>Arroz à Grega</span><br>Arroz com legumes coloridos.</li>
+                <li class="menu-item"><span>Feijoada</span><br>Feijão preto com carnes e arroz.</li>
+                <li class="menu-item"><span>Frango Assado</span><br>Frango assado temperado.</li>
+                <li class="menu-item"><span>Filé Mignon ao Molho Madeira</span><br>Filé mignon com molho de cogumelos.</li>
+                <li class="menu-item"><span>Peixe Grelhado</span><br>Peixe fresquinho grelhado com ervas finas.</li>
+                <li class="menu-item"><span>Arroz de Costela</span><br>Arroz cozido com costela de boi desfiada.</li>
+            </ul>
+        </article>
+
+        <!-- Sobremesas -->
+        <article class="menu-category">
+            <h2>Sobremesas</h2>
+            <ul>
+                <li class="menu-item"><span>Pudim de Leite Condensado</span><br>Pudim cremoso com calda.</li>
+                <li class="menu-item"><span>Torta de Limão</span><br>Base de biscoito com creme de limão.</li>
+                <li class="menu-item"><span>Gelatina Colorida</span><br>Gelatina em camadas variadas.</li>
+                <li class="menu-item"><span>Brigadeiro</span><br>Clássico doce de leite condensado.</li>
+                <li class="menu-item"><span>Doce de Abóbora</span><br>Doce de abóbora com coco.</li>
+                <li class="menu-item"><span>Quindim</span><br>Quindim cremoso de coco.</li>
+            </ul>
+          </article>
+
+        <!-- Mesa de Porções -->
+        <article class="menu-category">
+            <h2>Mesa de Porções</h2>
+            <ul>
+                <li class="menu-item"><span>Batatas Fritas</span><br>Tradicional batata frita crocante.</li>
+                <li class="menu-item"><span>Polenta Frita</span><br>Polenta frita crocante e macia por dentro.</li>
+                <li class="menu-item"><span>Espetinho de Frango</span><br>Espetinho com frango temperado.</li>
+                <li class="menu-item"><span>Mini Coxinhas</span><br>Mini coxinhas recheadas com frango.</li>
+                <li class="menu-item"><span>Bolinho de Bacalhau</span><br>Bolinho de bacalhau com um toque especial.</li>
+                <li class="menu-item"><span>Onion Rings</span><br>Anéis de cebola crocantes e saborosos.</li>
+            </ul>
+          </article>
+
+        <!-- Canapés -->
+        <article class="menu-category">
+            <h2>Canapés</h2>
+            <ul>
+                <li class="menu-item"><span>Canapé de Salmão</span><br>Pão com cream cheese e salmão defumado.</li>
+                <li class="menu-item"><span>Canapé de Queijo Brie</span><br>Queijo brie com geleia de damasco.</li>
+                <li class="menu-item"><span>Canapé de Atum</span><br>Atum temperado com maionese e cebolinhas.</li>
+                <li class="menu-item"><span>Canapé de Azeitona</span><br>Azeitonas recheadas com queijo.</li>
+                <li class="menu-item"><span>Canapé de Cogumelos</span><br>Cogumelos frescos com queijo parmesão.</li>
+                <li class="menu-item"><span>Canapé de Presunto</span><br>Presunto cru com rúcula e tomate seco.</li>
+            </ul>
+          </article>
+
+        <!-- Drinks do Open Bar -->
+        <article class="menu-category">
+            <h2>Drinks do Open Bar</h2>
+            <ul>
+                <li class="menu-item"><span>Caipirinha</span><br>Limão, cachaça, açúcar e gelo.</li>
+                <li class="menu-item"><span>Mojito</span><br>Rum, hortelã, açúcar e limão.</li>
+                <li class="menu-item"><span>Piña Colada</span><br>Rum, abacaxi, leite de coco.</li>
+                <li class="menu-item"><span>Caipiroska</span><br>Vodka, limão e açúcar.</li>
+                <li class="menu-item"><span>Tequila Sunrise</span><br>Tequila, suco de laranja e grenadine.</li>
+                <li class="menu-item"><span>Sex on the Beach</span><br>Vodka, pêssego, suco de laranja e cranberry.</li>
+            </ul>
+        </article>
+      </div>
+      <section class="galery">
+            <img src="./assets/imgs/bf3 (2).jpg" alt="imagens da mesa coberta de alimentos servidos no local">
+            <img src="./assets/imgs/bf2.jpg" alt="imagens da mesa coberta de alimentos servidos no local">
+            <img src="./assets/imgs/bf3.jpg" alt="imagens da mesa coberta de alimentos servidos no local">
+            <img src="./assets/imgs/bar1.jpg" alt="imagens da mesa coberta de alimentos servidos no local">
+      </section>
   </section>
 
-  <section id="localizacao" class="secao">
-    <div class="conteudo">
-      <h1>Localização</h1>
-      <p>Estamos localizados no coração da cidade. Venha nos visitar.</p>
-    </div>
+  <section id="localizacao" class="secao-localizacao">
+  <div class="conteudo">
+      <div class="conteudo-local">
+        <h2 class="title-local">Você é nosso convidado especial!</h2>
+        <p>
+        O <strong>Espaço Nobre</strong> abre as portas para uma noite inesquecível. <span><br><br>
+          Das 20:00 as 02:00, de segunda a sabado.</span>  <br><br>
+        Prepare-se para viver momentos únicos em um ambiente de pura elegância.
+        </p><br><br>
+        <p class="endereco"> <strong>Local:</strong> Bairro Novo Horizonte, Rua Daniel Freire, 383</p>
+      </div>
+      <div class="img-sobre">
+        <img src="./assets/imgs/entrada.jpg" alt="imagen do buffe , na seção sobre">
+      </div>
+  </div>
   </section>
+
+<footer class="footer">
+  <h2>Espaço Ramalho Confort</h2>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/watsbm/" target="_blank" aria-label="Instagram">
+      <i class="bx bxl-instagram" ></i>
+    </a>
+
+    <a href="https://wa.me/5533999130080" target="_blank" aria-label="WhatsApp">
+     <i class='bx bxl-whatsapp '></i> 
+    </a>
+
+    <a href="mailto:watsonbm01@gmail.com" target="_blank" aria-label="E-mail">
+      <i class='bx bxl-gmail'></i> 
+    </a>
+  </div>
+
+  <!-- Font Awesome CDN para os ícones -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</footer>
+
 </main>
 
 <script src="./js/index.js"></script>

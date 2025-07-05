@@ -3,13 +3,16 @@
     margin:0;
     padding:0;
     scroll-behavior:smooth;
-    scroll-padding-top:50px
+    scroll-padding-top:50px;
+    text-decoration: none;
 }
+
 body {
     font-family:Arial,sans-serif;
     background:url('../assets/imgs/slide1.2.webp')no-repeat center center fixed;
     background-size:cover
 }
+
 body::before {
     content:"";
     position:fixed;
@@ -26,7 +29,7 @@ header {
     position:fixed;
     top:0;
     width:100%;
-    height:80px;
+    height:110px;
     background-color:rgba(0,0,0,0.7);
     display:flex;
     justify-content:space-between;
@@ -34,8 +37,24 @@ header {
     padding:14px 40px 10px 40px;
     z-index:9999
 }
+
+header h1{text-align: center center;
+    color: rgba(231, 199, 71, 0.9);
+    font-size: 40px;
+    font-style: oblique;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mobile-title{text-align: center center;
+    color: rgba(231, 199, 71, 0.9);
+    font-size: 40px;
+    font-style: oblique;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: none;
+}
+
 .logo img {
-    width:70px;
+    width:100px;
     height:auto;
 }
 nav.menu {
@@ -46,7 +65,7 @@ nav.menu {
 nav.menu a {
     color:white;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:bold;font-size:22px;
     transition:300ms
 }
 nav.menu a:hover {
@@ -63,11 +82,24 @@ nav.menu .btn {
     font-weight:bold;
     transition:300ms
 }
+
+.button-reserva-mob{
+    background-color:rgba(226,221,155,0.6);
+    color:rgb(255,255,255);
+    border:none;
+    padding:10px 20px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:300ms
+}
+
 nav.menu .btn:hover {
     background-color:#0056b3;
     transform:scale(1.05)
 }
 main {
+    text-align: center;
     padding-top:100px
 }
 #home {
@@ -205,7 +237,8 @@ main {
 .carousel-btn.next {
     right:20px
 }
-.secao {
+.secao-inicio {
+    scroll-margin:40px;
     min-height:100vh;
     display:flex;
     justify-content:center;
@@ -239,6 +272,8 @@ main {
 }
 .menu-mobile {
     display:none;
+    background-color:transparent;
+    border-color: transparent;
     flex-direction:column;
     cursor:pointer;
     z-index:99999
@@ -246,10 +281,169 @@ main {
 .menu-mobile div {
     width:25px;
     height:3px;
-    background-color:white;
+    background-color:rgb(179, 4, 4);
     margin:4px 0;
     transition:0.3s
 }
+/*seção sobre o local*/
+
+.secao-sobre{
+    scroll-margin:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secao-sobre .conteudo{
+    max-width:80VW;
+    background-color: rgb(255 255 255 / 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgb(255 255 255 / 0.3);
+    box-shadow: 0 8px 32px rgb(0 0 0 / 0.37);
+    padding: 35px;
+    color: #fff;
+}
+
+.secao-sobre .conteudo h2,h3{
+    text-align: center;
+}
+
+.conteudo{
+    display: flex;
+    gap:40px;
+}
+
+.img-sobre img{
+    width: 400px;
+}
+
+/*section menu cardapio*/
+
+.menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;padding-top:40px;
+            margin: 0 auto;
+        }
+        .menu-category {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .menu-category h2 {
+            text-align: center;
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .menu-item {
+            list-style-type: none;
+            font-size: 0.9em;
+            padding: 5px 0;
+        }
+        .menu-item span {
+            font-weight: bold;
+            color: #333;
+        }
+
+
+        /*seção de localização*/
+
+        .secao-localizacao{
+        padding: 80px 0px 80px 0px;
+        width:100vw;
+        scroll-margin:-17px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255 255 255 / 0.2);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 20px;
+        border: 1px solid rgb(255 255 255 / 0.3);
+        box-shadow: 0 8px 32px rgb(0 0 0 / 0.37);
+        padding: 35px;
+        color: #fff;    
+        }
+
+        .secao-localizacao .conteudo-local{
+            text-align: center;
+        }
+
+         .secao-localizacao .conteudo-local span{
+            color: #fffb00;
+            font-size: 30px;
+         }
+
+         .secao-localizacao .conteudo-local .endereco{
+            color: #fffb00;
+            font-size:30px;
+         }
+
+    .secao-localizacao .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    color: #fff;
+    }     
+
+    .secao-localizacao .conteudo img{
+        border-radius:15px;
+        width:700px;
+        max-height:340px;
+    }
+
+    .secao-localizacao .conteudo .title-local{
+        font-size:45px;
+    }
+
+    /*footer/rodapé*/
+
+    .footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer h2 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 15px;
+    }
+
+    .footer .social-icons a {
+      color: white;
+      font-size: 3rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .footer .social-icons a:hover {
+      color: #e7c747;
+      transform: scale(1.2);
+    }
+        
+    .button-reserva-mob{
+        display: none;
+    }
+
 @media(max-width:1024px) {
     header {
         padding:0 20px
@@ -263,8 +457,12 @@ main {
     .carousel {
         height:420px
     }
+    .menu-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
 }
 @media(max-width:768px) {
+
     .menu-mobile {
         display:flex
     }
@@ -308,11 +506,66 @@ main {
         width:90%;
         margin:0 auto
     }
+
 }
 @media(max-width:480px) {
+
+    .secao-localizacao .conteudo-local h2{
+        font-size:20px;
+    }
+
+    .secao-localizacao .conteudo-local span{
+            font-size: 20px;
+            
+         }
+
+         .secao-localizacao .conteudo-local .title-local{
+            font-size:30px;
+            margin-bottom: 20px;
+         }
+
+    .button-reserva-mob{
+        display: block;
+    }
+
+    .button-reserva-mob:hover{
+    background-color:#0056b3;
+    transform:scale(1.05)
+}
+
+
     .carousel {
         height:260px
     }
+
+    .secao-sobre{
+        padding-bottom:60px;
+    }
+
+    .secao-menu-cardapio{
+        padding-bottom:60px;
+    }
+
+    .secao-inicio{
+        scroll-margin: -0px;
+    }
+
+    .logo img{
+        width:65px;
+    }
+
+    header{
+        height:75px;
+    }
+
+    header h1{
+        display: none;
+    }
+
+    .mobile-title{
+        display: block;
+    }
+
     main {
         padding-top:110px
     }
@@ -343,4 +596,136 @@ main {
     .carousel-selector-externo button {
         font-size:0.8rem
     }
+}
+
+/* Responsividade adicional para telas entre 1025px e 1366px */
+@media(min-width:1025px) and (max-width:1366px) {
+    .carousel { height: 440px; }
+    .menu-container { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Responsivo para tablets grandes e laptops pequenos */
+@media(max-width:991px) {
+    .menu-container { grid-template-columns: repeat(2, 1fr); }
+    .conteudo { flex-direction: column; align-items: center; }
+    .img-sobre img { width: 100%; max-width: 350px; }
+}
+
+/* Ajustes para smartphones médios */
+@media(max-width:600px) {
+    .carousel { height: 300px; }
+    .conteudo { flex-direction: column; gap: 20px; padding: 20px; }
+    .img-sobre img { width: 100%; max-width: 300px; }
+    .secao-sobre .conteudo { padding: 20px; }
+}
+
+/* Ajustes para dispositivos muito pequenos */
+@media(max-width:360px) {
+    .carousel-selector-externo button {
+        font-size: 0.7rem;
+        padding: 8px 10px;
+    }
+    .menu-container { grid-template-columns: 1fr; }
+}
+
+
+/* Ajustes aprimorados para o cardápio em dispositivos menores */
+@media(max-width:1024px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+}
+
+/*novos ajustes*/
+@media(max-width:768px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .menu-category {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+}
+
+@media(max-width:480px) {
+    .menu-category h2 {
+        font-size: 1.2rem;
+    }
+
+    .menu-item {
+        font-size: 0.85rem;
+    }
+
+    .menu-category {
+        padding: 10px;
+    }
+}
+
+
+/* Galeria em uma única fileira horizontal */
+
+
+
+.galery img:first-child {
+    margin-left: auto;
+}
+.galery img:last-child {
+    margin-right: auto;
+}
+
+
+
+
+
+/* Galeria horizontal apenas em dispositivos menores */
+@media (max-width: 768px) {
+  
+}
+
+
+/* Estilo original mantido para telas grandes */
+.galery {
+  padding: 40px 0px 40px 0px;
+  max-width: 75%;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}
+
+.galery img {
+  border-radius: 15px;
+  border: solid 2px rgb(172, 172, 172);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Galeria horizontal apenas para telas menores */
+@media (max-width: 768px) {
+  .galery {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .galery img {
+    flex: 0 0 auto;
+    height: 160px;
+    width: auto;
+    scroll-snap-align: start;
+  }
 }

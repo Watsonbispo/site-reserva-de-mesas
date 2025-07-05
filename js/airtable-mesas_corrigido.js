@@ -20,7 +20,6 @@ async function carregarMesas(setor, tipo) {
             return;
         }
         
-        
         mesaSelect.innerHTML = '<option value="">Selecione...</option>';
         data.forEach((item) => {
             const option = document.createElement("option");
@@ -59,13 +58,19 @@ document.addEventListener("DOMContentLoaded", () => {
     mesaSelect.addEventListener("change", checkEnableReservar);
     reservarBtn.addEventListener("click", (e) => {
         e.preventDefault();
+        if(!setorSelect.value || !tipoSelect.value || !mesaSelect.value){
+            reservarBtn.style.border="solid 2px red"
+            alert("preencha todos os campos")
+        }
+        else{
+        reservarBtn.style.border="solid 0px"
         const selectedOption = mesaSelect.options[mesaSelect.selectedIndex];
         const link = selectedOption?.getAttribute("data-link");
         if (link && link.startsWith("http")) {
             window.location.href = link;
         } else {
             alert("Por favor, selecione uma mesa válida com link de pagamento.");
-        }
+        }}
     });
 });
 window.addEventListener("pageshow", () => {
@@ -74,7 +79,7 @@ window.addEventListener("pageshow", () => {
     if (setorSelect?.value && tipoSelect?.value) {
         setTimeout(() => {
             carregarMesas(setorSelect.value, tipoSelect.value);
-        }, 150);
+        }, 15);
     }
 });
 const btnAjud = document.getElementById("ajuda");

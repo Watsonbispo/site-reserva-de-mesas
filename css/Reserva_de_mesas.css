@@ -161,6 +161,10 @@ justify-content: center;
 .formulario button:hover {
     background-color: #0056b3;
 }
+
+.desativado:hover{
+color: rgb(255, 38, 38);
+}
 .modal {
     display: none;
     position: fixed;
