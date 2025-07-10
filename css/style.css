@@ -321,6 +321,16 @@ main {
 
 /*section menu cardapio*/
 
+.secao-menu-cardapio{
+    scroll-margin:55px;
+}
+
+.title-Cardapio{
+    margin-top: 45px;
+    font-size: 45px;
+    color: #ffffff;
+}
+
 .menu-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
